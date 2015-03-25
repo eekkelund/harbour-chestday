@@ -1,4 +1,4 @@
 # Chestday
-SailfishOS chestday app 
+SailfishOS Chestday app 
 ##License
 GNU General Public License v3.0
