@@ -18,7 +18,6 @@ OTHER_FILES = \
 #    ../rpm/harbour-chestday.yaml \
     qml/main.qml \
     qml/pages/Firstpage.qml \
-    qml/pages/chestday.qml \
     qml/pages/chestday.py \ 
     qml/cover/cover.qml \
     qml/pages/about.qml

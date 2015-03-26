@@ -41,16 +41,38 @@ Page {
             SectionHeader {
                 text: qsTr("DEVELOPED WHILE BENCHPRESSING")
             }
+
             Label {
-                text: "Eetu Kahelin\n@eetz1/@eekkelund/@ete"
+                text: "Eetu Kahelin\n@eetz1/@eekkelund"
+                MouseArea {
+                    anchors.fill: parent;
+                    onClicked: {
+                        weed.visible = true
+                    }
+                }
             }
+
+            AnimatedImage {
+                id:weed
+                fillMode: AnimatedImage.PreserveAspectFit
+                anchors.horizontalCenter: parent.horizontalCenter
+                source: "images/arnweed.gif"
+                visible: false
+                MouseArea {
+                    anchors.fill: parent;
+                    onClicked: {
+                        weed.visible = false
+                    }
+                }
+            }
+
             SectionHeader {
                 text: qsTr("MOTHERFUCKING OPENSOURCE")
-                        }
+            }
             Label {
                 text: qsTr("<a href='https://github.com/eekkelund/harbour-chestday'>GITHUB</a>")
                 onLinkActivated: Qt.openUrlExternally(link)
-                        }
+            }
         }
     }
 }

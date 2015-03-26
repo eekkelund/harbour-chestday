@@ -5,36 +5,63 @@ import io.thp.pyotherside 1.3
 
 Page {
     id: page
+    allowedOrientations: Orientation.All
     SilicaFlickable {
         anchors.fill: parent
-        //Go to next page when pulldownmenu clicked
+        contentHeight: column.height
         PullDownMenu {
             MenuItem {
                 text: qsTr("ABOUT THE SICKCUNT")
                 onClicked: pageStack.push(Qt.resolvedUrl("about.qml"))
             }
-            MenuItem {
-                text: qsTr("TO GET CHEST PUMPED")
-                onClicked: pageStack.push(Qt.resolvedUrl("chestday.qml"))
-            }
-        }
-        contentHeight: column.height
+                MenuItem {
+                    text: qsTr("CHECK IT")
+                    onClicked: py.call('chestday.chest', [], function(result) {
+                        header.title = result[0]
+                        label.text = result[1]
+                        image.source = "images/" + result[2]
+                    })
+                }
 
+        }
         Column {
             id: column
             width: page.width
             spacing: Theme.paddingLarge
             PageHeader {
+                id: header
                 title: qsTr("CHESTDAY?!")
             }
+
             Label {
                 x: Theme.paddingLarge
-                text: qsTr("PULL DAT MENU")
+                id: label
                 color: Theme.primaryColor
-                font.pixelSize: Theme.fontSizeExtraLarge
+                text: qsTr("PULL THAT MENU TO FIND OUT")
+
+            }
+            Image {
+                id: image
+                sourceSize.width: column.width
+                anchors.horizontalCenter: parent.horizontalCenter
+                source: ""
 
 
             }
         }
+
+
+        Python {
+            id: py
+            Component.onCompleted: {
+
+                addImportPath(Qt.resolvedUrl('.'));
+                importModule('chestday', function() {
+
+                })
+            }
+        }
+
+
     }
 }
