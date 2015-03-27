@@ -50,12 +50,13 @@ Page {
                         weed.visible = true
                     }
                 }
-            }
+
 
             AnimatedImage {
                 id:weed
                 fillMode: AnimatedImage.PreserveAspectFit
-                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.leftMargin: 20
+                anchors.left: parent.right
                 source: "images/arnweed.gif"
                 visible: false
                 MouseArea {
@@ -65,7 +66,7 @@ Page {
                     }
                 }
             }
-
+}
             SectionHeader {
                 text: qsTr("MOTHERFUCKING OPENSOURCE")
             }
