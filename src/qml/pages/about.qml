@@ -23,7 +23,7 @@ Page {
                     id: labelAbout
                     width: parent.width
                     wrapMode: Text.Wrap
-                    text: qsTr("Chestday is native application for SailfishOS to check whether it is chestday or not. FYI monday is international chestday. Powered by QML, Qt and Python.")
+                    text: qsTr("Chestday is native application for SailfishOS to check whether it is chestday or not. FYI monday is international chestday. Powered by QML, Qt and Python. I don't own the pictures used in this app")
                 }
             }
             SectionHeader {
@@ -68,7 +68,7 @@ Page {
             }
 }
             SectionHeader {
-                text: qsTr("MOTHERFUCKING OPENSOURCE")
+                text: qsTr("MOTHERF***ING OPENSOURCE")
             }
             Label {
                 text: qsTr("<a href='https://github.com/eekkelund/harbour-chestday'>GITHUB</a>")

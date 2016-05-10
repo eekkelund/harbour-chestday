@@ -11,7 +11,7 @@ Page {
         contentHeight: column.height
         PullDownMenu {
             MenuItem {
-                text: qsTr("ABOUT THE SICKCUNT")
+                text: qsTr("ABOUT")
                 onClicked: pageStack.push(Qt.resolvedUrl("about.qml"))
             }
                 MenuItem {

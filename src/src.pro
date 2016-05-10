@@ -7,7 +7,7 @@ DEFINES += APP_VERSION=\"\\\"$${VERSION}\\\"\"
 # In the bright future this config line will do a lot of stuff to you
 CONFIG += sailfishapp
 
-SOURCES += main.cpp
+SOURCES +=
 
 OTHER_FILES = \
 # You DO NOT want .yaml be listed here as Qt Creator's editor is completely not ready for multi package .yaml's
